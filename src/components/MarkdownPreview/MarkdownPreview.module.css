@@ -1,0 +1,99 @@
+.preview {
+  padding: 12px;
+  background: var(--discord-bg-tertiary);
+  border: 1px solid var(--discord-border);
+  border-radius: 4px;
+  color: var(--discord-text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.preview strong {
+  font-weight: 600;
+  color: var(--discord-text-primary);
+}
+
+.preview em {
+  font-style: italic;
+}
+
+.preview del {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.preview u {
+  text-decoration: underline;
+}
+
+.preview code {
+  padding: 2px 4px;
+  background: var(--discord-bg-primary);
+  border-radius: 3px;
+  font-family: "Consolas", "Monaco", monospace;
+  font-size: 13px;
+}
+
+.preview pre {
+  padding: 8px;
+  background: var(--discord-bg-primary);
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.preview pre code {
+  padding: 0;
+  background: none;
+}
+
+.preview :global(.spoiler) {
+  background: var(--discord-bg-primary);
+  color: transparent;
+  border-radius: 3px;
+  padding: 0 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.preview :global(.spoiler):hover {
+  color: var(--discord-text-primary);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.preview blockquote {
+  border-left: 4px solid var(--discord-border);
+  padding-left: 12px;
+  margin: 8px 0;
+  color: var(--discord-text-secondary);
+}
+
+.preview a {
+  color: var(--discord-blurple);
+  text-decoration: none;
+}
+
+.preview a:hover {
+  text-decoration: underline;
+}
+
+.preview :global(.mention) {
+  background: rgba(88, 101, 242, 0.3);
+  color: var(--discord-blurple);
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.preview :global(.channel) {
+  background: rgba(88, 101, 242, 0.15);
+  color: var(--discord-blurple);
+  padding: 0 2px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.preview :global(.emoji) {
+  font-weight: 500;
+}

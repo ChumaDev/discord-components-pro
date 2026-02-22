@@ -1,0 +1,87 @@
+.separator {
+  width: 100%;
+  position: relative;
+}
+
+.spacing-none {
+  margin: 0;
+}
+
+.spacing-small {
+  margin: var(--spacing-sm) 0;
+}
+
+.spacing-large {
+  margin: var(--spacing-lg) 0;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--discord-bg-accent);
+  opacity: 0.3;
+}
+
+.noDivider {
+  height: 0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper.editable {
+  padding: var(--spacing-xs);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.wrapper.editable:hover {
+  background-color: var(--discord-bg-secondary);
+  border-color: var(--discord-bg-accent);
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-xs);
+  transform: translateY(-50%);
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.wrapper:hover .controls {
+  opacity: 1;
+}
+
+.controlButton {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--discord-bg-tertiary);
+  color: var(--discord-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.controlButton:hover {
+  background-color: var(--discord-bg-accent);
+  color: var(--discord-text-primary);
+}
+
+.controlButton.delete:hover {
+  background-color: var(--discord-danger);
+  color: white;
+}
+
+.controlButton.edit:hover {
+  background-color: var(--discord-brand);
+  color: white;
+}

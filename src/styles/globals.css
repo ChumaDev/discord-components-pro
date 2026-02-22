@@ -1,0 +1,116 @@
+/**
+ * Global Styles
+ * Discord-like theme variables and base styles
+ */
+
+:root {
+  /* Discord Colors - Dark Theme */
+  --discord-bg-primary: #313338;
+  --discord-bg-secondary: #2b2d31;
+  --discord-bg-tertiary: #1e1f22;
+  --discord-bg-accent: #404249;
+
+  --discord-text-primary: #f2f3f5;
+  --discord-text-secondary: #b5bac1;
+  --discord-text-muted: #80848e;
+
+  --discord-brand: #5865f2;
+  --discord-success: #23a559;
+  --discord-danger: #da373c;
+  --discord-warning: #f0b232;
+
+  /* Button Colors */
+  --discord-button-primary: #5865f2;
+  --discord-button-primary-hover: #4752c4;
+  --discord-button-secondary: #4e5058;
+  --discord-button-secondary-hover: #6d6f78;
+  --discord-button-success: #248046;
+  --discord-button-success-hover: #1a6334;
+  --discord-button-danger: #da373c;
+  --discord-button-danger-hover: #a12828;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
+  --discord-bg-primary: #ffffff;
+  --discord-bg-secondary: #f2f3f5;
+  --discord-bg-tertiary: #e3e5e8;
+  --discord-bg-accent: #d4d7dc;
+
+  --discord-text-primary: #060607;
+  --discord-text-secondary: #4e5058;
+  --discord-text-muted: #80848e;
+
+  /* Button Colors for Light Theme */
+  --discord-button-primary: #5865f2;
+  --discord-button-primary-hover: #4752c4;
+  --discord-button-secondary: #d4d7dc;
+  --discord-button-secondary-hover: #b9bbbe;
+  --discord-button-success: #248046;
+  --discord-button-success-hover: #1a6334;
+  --discord-button-danger: #da373c;
+  --discord-button-danger-hover: #a12828;
+
+  /* Shadows for Light Theme */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.discord-component {
+  background-color: var(--discord-bg-primary);
+  color: var(--discord-text-primary);
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.discord-component:hover {
+  background-color: var(--discord-bg-secondary);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--discord-bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--discord-bg-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e5058;
+}

@@ -1,0 +1,48 @@
+# Source files
+src/
+playground/
+.storybook/
+
+# Config files
+*.config.ts
+*.config.js
+tsconfig.json
+biome.json
+vite.config.ts
+vitest.config.ts
+
+# Tests
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/__tests__/
+coverage/
+.nyc_output/
+
+# Documentation (keep only README)
+*.md
+!README.md
+!LICENSE
+
+# Development
+.git/
+.github/
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+
+# Storybook
+storybook-static/
+
+# Build artifacts (keep only dist)
+*.log
+*.tgz
+.env
+.env.local
+
+# CI/CD
+.travis.yml
+.gitlab-ci.yml
+azure-pipelines.yml

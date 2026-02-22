@@ -1,0 +1,106 @@
+.textDisplay {
+  padding: var(--spacing-md);
+  color: var(--discord-text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+.textDisplay.editable {
+  cursor: text;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.textDisplay.editable:hover {
+  background-color: var(--discord-bg-secondary);
+  border-color: var(--discord-bg-accent);
+}
+
+.textDisplay.editing {
+  background-color: var(--discord-bg-secondary);
+  border-color: var(--discord-brand);
+}
+
+.textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--discord-text-primary);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  resize: none;
+  padding: 0;
+}
+
+.controls {
+  position: absolute;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.textDisplay:hover .controls {
+  opacity: 1;
+}
+
+.controlButton {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--discord-bg-tertiary);
+  color: var(--discord-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.controlButton:hover {
+  background-color: var(--discord-bg-accent);
+  color: var(--discord-text-primary);
+}
+
+.controlButton.delete:hover {
+  background-color: var(--discord-danger);
+  color: white;
+}
+
+.error {
+  border-color: var(--discord-danger);
+}
+
+.errorMessage {
+  color: var(--discord-danger);
+  font-size: 12px;
+  margin-top: var(--spacing-xs);
+}
+
+.dragHandle {
+  position: absolute;
+  left: var(--spacing-xs);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: grab;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: var(--discord-text-muted);
+}
+
+.textDisplay:hover .dragHandle {
+  opacity: 1;
+}
+
+.dragHandle:active {
+  cursor: grabbing;
+}

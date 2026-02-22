@@ -1,0 +1,8 @@
+.sortableItem {
+  cursor: grab;
+  user-select: none;
+}
+
+.sortableItem:active {
+  cursor: grabbing;
+}

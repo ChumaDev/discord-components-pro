@@ -1,0 +1,170 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  min-height: 32px;
+  white-space: nowrap;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button Styles */
+.primary {
+  background-color: var(--discord-button-primary);
+  color: white;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--discord-button-primary-hover);
+}
+
+.secondary {
+  background-color: var(--discord-button-secondary);
+  color: white;
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: var(--discord-button-secondary-hover);
+}
+
+.success {
+  background-color: var(--discord-button-success);
+  color: white;
+}
+
+.success:hover:not(:disabled) {
+  background-color: var(--discord-button-success-hover);
+}
+
+.danger {
+  background-color: var(--discord-button-danger);
+  color: white;
+}
+
+.danger:hover:not(:disabled) {
+  background-color: var(--discord-button-danger-hover);
+}
+
+.link {
+  background-color: transparent;
+  color: var(--discord-brand);
+  text-decoration: none;
+}
+
+.link:hover:not(:disabled) {
+  text-decoration: underline;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Editable state */
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.wrapper.editable {
+  padding: var(--spacing-xs);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.wrapper.editable:hover {
+  background-color: var(--discord-bg-secondary);
+  border-color: var(--discord-bg-accent);
+}
+
+.controls {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.wrapper:hover .controls {
+  opacity: 1;
+}
+
+.controlButton {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--discord-bg-tertiary);
+  color: var(--discord-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.controlButton:hover {
+  background-color: var(--discord-bg-accent);
+  color: var(--discord-text-primary);
+}
+
+.controlButton.delete:hover {
+  background-color: var(--discord-danger);
+  color: white;
+}
+
+.controlButton.edit:hover {
+  background-color: var(--discord-brand);
+  color: white;
+}
+
+.emoji {
+  font-size: 16px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customEmoji {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.error {
+  border-color: var(--discord-danger);
+}
+
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--discord-danger);
+  font-size: 11px;
+  white-space: nowrap;
+}
