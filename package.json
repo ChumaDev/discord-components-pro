@@ -1,5 +1,5 @@
 {
-  "name": "@discord-components/sdk",
+  "name": "@chumadev/discord-components-pro",
   "version": "0.1.0",
   "description": "Professional Discord Components v2 SDK - Build beautiful Discord messages with React",
   "type": "module",

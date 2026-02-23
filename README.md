@@ -50,11 +50,11 @@
 ## 📦 Installation
 
 ```bash
-npm install @discord-components/sdk
+npm install @chumadev/discord-components-pro
 # or
-yarn add @discord-components/sdk
+yarn add @chumadev/discord-components-pro
 # or
-pnpm add @discord-components/sdk
+pnpm add @chumadev/discord-components-pro
 ```
 
 ---
@@ -62,8 +62,8 @@ pnpm add @discord-components/sdk
 ## 🚀 Quick Start
 
 ```tsx
-import { MessageBuilder } from '@discord-components/sdk';
-import '@discord-components/sdk/sdk.css';
+import { MessageBuilder } from '@chumadev/discord-components-pro';
+import '@chumadev/discord-components-pro/discord-components-pro.css';
 
 function App() {
   return (
@@ -82,7 +82,7 @@ function App() {
 ### Basic Component
 
 ```tsx
-import { Button, ButtonStyle } from '@discord-components/sdk';
+import { Button, ButtonStyle } from '@chumadev/discord-components-pro';
 
 function MyComponent() {
   return (
@@ -98,7 +98,7 @@ function MyComponent() {
 ### Visual Editor
 
 ```tsx
-import { MessageBuilder, useComponentStore } from '@discord-components/sdk';
+import { MessageBuilder, useComponentStore } from '@chumadev/discord-components-pro';
 
 function Editor() {
   const { components } = useComponentStore();
@@ -115,7 +115,7 @@ function Editor() {
 ### Export to Discord.js
 
 ```tsx
-import { useExport } from '@discord-components/sdk';
+import { useExport } from '@chumadev/discord-components-pro';
 
 function ExportButton() {
   const { exportToFormat } = useExport();
@@ -132,7 +132,7 @@ function ExportButton() {
 ### Keyboard Shortcuts
 
 ```tsx
-import { useKeyboardShortcuts } from '@discord-components/sdk';
+import { useKeyboardShortcuts } from '@chumadev/discord-components-pro';
 
 function MyComponent() {
   useKeyboardShortcuts([
